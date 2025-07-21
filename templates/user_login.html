@@ -1,25 +1,24 @@
 {% extends 'dummy.html' %}
-{% block title %}
 
-<title>HomePage</title>
+{% block title %}
+    <title>Login Page</title>
+
 {% endblock %}
 
 
-
 {% block body_block %}
-<center>
-    <h1>user_login Page</h1>
-    <form method="POST">
-        {% csrf_token %}
-        <label for="username">Username</label>
-        <input type="text" name="username" id="username">
-        <br><br>
+<h1>fill the deatils to Login</h1>
 
-        <label for="password">password</label>
-        <input type="password" name="password" id="password">
-        <br><br>
+<form method="POST">
+    {% csrf_token %}
+    <label for="un">UserName:</label>
+    <input type="text" name="un" id="un"><br><br>
 
-        <input type="submit" value="user_login">
-    </form>
-</center>
+    <label for="pw">PassWord</label>
+    <input type="password" name="pw" id="pw"><br><br>
+
+    <input type="submit" value="user_login" class="btn btn-primary">
+</form>
+<a href="{% url 'reset_password' %}">reset_password</a>
+
 {% endblock %}

@@ -137,3 +137,13 @@ EMAIL_HOST_PASSWORD='ywma gxes kdkv ouva'
 EMAIL_USE_TLS=True
 EMAIL_USE_SSL=False
 EMAIL_PORT=587
+
+
+
+# Add these lines, or modify if they already exist:
+
+LOGIN_URL = '/user_login/'
+LOGIN_REDIRECT_URL = '/home/'
+LOGOUT_REDIRECT_URL = '/home/'
+
+# ... (any other settings below these) ...
